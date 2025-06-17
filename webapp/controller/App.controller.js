@@ -5,6 +5,12 @@ sap.ui.define([
 
     return Controller.extend("deltalight.com.mybankdetails.controller.App", {
         onInit() {
+
+            if (navigator.language == 'es') {
+                let i18nModel = this.getOwnerComponent().getModel("i18n_es");
+
+                this.getOwnerComponent().setModel(i18nModel, "i18n");
+            }
         },
 
         onOpenBankDetails: function () {
