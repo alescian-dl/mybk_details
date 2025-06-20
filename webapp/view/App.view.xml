@@ -11,9 +11,20 @@
 
             <content>
 
+                <!-- Bank Detail Fragment -->
                 <core:Fragment id="bankDetailsFragment" fragmentName="deltalight.com.mybankdetails.view.fragments.BankDetails" type="XML"/>
 
-                <Button id="openBankDetails" type="Neutral" text="{i18n>findMoreBtn}" class="sapUiSmallMarginBegin" press=".onOpenBankDetails"/>
+                <Panel id="pCards" expandable="true" headerText="{i18n>cardDetails}" width="auto" class="sapUiResponsiveMargin">
+                    <content>
+                        <List id="myList" mode="None" items="" width="50%">
+                            <items>
+                                <StandardListItem id="card1" title="Title text" description="Description text" icon="sap-icon://credit-card" iconInset="false" highlight="Information" info="Active" infoState="Information" infoStateInverted="true" />
+                                <StandardListItem id="card2" title="Title text2" description="Description text2" icon="sap-icon://credit-card" iconInset="false" highlight="Error" info="Expired" infoState="Error" infoStateInverted="true" />
+                                <StandardListItem id="card3" title="Title text3" description="Description text3" icon="sap-icon://credit-card" iconInset="false" highlight="Success" info="Active" infoState="Success" infoStateInverted="true" />
+                            </items>
+                        </List>
+                    </content>
+                </Panel>
 
             </content>
         </Page>
