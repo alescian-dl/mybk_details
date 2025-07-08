@@ -1,40 +1,39 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
     xmlns="sap.m">
-
     <Dialog id="moreBankDetails" title="{i18n>confDetail}">
-
-        <VBox id="vBox2" class="sapUiSmallMargin">
-            <Title id="accDetailsa" text="{i18n>accDetails}" level="H1" />
+        <VBox id="vBox2" class="sapUiSmallMargin" binding="{oBankDetails>/accountDetails}">
+            <!--<Title id="accDetailsa" text="{i18n>accDetails}" level="H1" /> -->
             <HBox id="hBox1a">
                 <Label id="lblacnuma" text="{i18n>accNum}" class="sapUiSmallMarginEnd" />
-                <Text id="accountNuma" text="12345*****" />
+                <!--<Text id="accountNuma" text="12345*****" /> -->
+                <Text id="accountNuma" text="{oBankDetails>accountNum}" />
             </HBox>
 
             <HBox id="hBox2a">
                 <Label id="lblAcHolderNameIda" text="{i18n>accHNum}" class="sapUiSmallMarginEnd" />
-                <Text id="idAcholderNameValuea" text="Alferez Nomfredi" />
+                <!--<Text id="idAcholderNameValuea" text="Alferez Nomfredi" /> -->
+                <Text id="idAcholderNameValuea" text="{oBankDetails>name}" />
             </HBox>
 
             <HBox id="hBox3a">
                 <Label id="lblIFSCIda" text="{i18n>iFSCode}" class="sapUiSmallMarginEnd" />
-                <Text id="idIFSCIda" text="00000*****" />
+                <!--<Text id="idIFSCIda" text="00000*****" /> -->
+                <Text id="idIFSCIda" text="{oBankDetails>IFSC}" />
             </HBox>
 
             <HBox id="hBox4">
                 <Label id="lblCustId" text="{i18n>cusID}" class="sapUiSmallMarginEnd" />
-                <Text id="idCustValue" text="67895*****" />
+                <Text id="idCustValue" text="{oBankDetails>customerId}" />
             </HBox>
 
             <HBox id="hBox5">
                 <Label id="lblAddressId" text="{i18n>address}" class="sapUiSmallMarginEnd" />
-                <Text id="idAdressValue" text="**/** **************  *****" />
+                <Text id="idAdressValue" text="{oBankDetails>address/houseNumber}, {oBankDetails>address/street}, {oBankDetails>address/city}, {oBankDetails>address/country}" />
             </HBox>
         </VBox>
 
         <beginButton>
-            <Button id="closeBtn" text="Close" press=".onCloseBankDetails"/>
+            <Button id="closeBtn" text="Close" press=".onCloseBankDetails" />
         </beginButton>
-
     </Dialog>
-
 </core:FragmentDefinition>

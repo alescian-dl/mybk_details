@@ -1,0 +1,40 @@
+{
+    "accountDetails": {
+        "accountNum": "0000000009",
+        "name": "Alfred McCain",
+        "IFSC": "000001",
+        "customerId": "122345",
+        "address": {
+            "city": "Newyark",
+            "postalCode": "28224",
+            "houseNumber": "001",
+            "street": "Wall Street",
+            "state": "California",
+            "country": "Argentina"
+        }
+    },
+    "ifsCode": "000002",
+    "cardDetails": [
+        {
+            "cardcompany": "MasterCard",
+            "cardtype": "Credit Card",
+            "cardnumber": "0000 0000 0000 0001",
+            "assignmentdate": "Assigned on Aug 23rd",
+            "state": true
+        },
+        {
+            "cardcompany": "PichiCard",
+            "cardtype": "Credit Card",
+            "cardnumber": "0000 0000 0000 0002",
+            "assignmentdate": "Assigned on Oct 20st",
+            "state": false
+        },
+        {
+            "cardcompany": "Visa",
+            "cardtype": "Credit Card",
+            "cardnumber": "0000 0000 0000 0003",
+            "assignmentdate": "Assigned on Aug 23rd",
+            "state": true
+        }
+    ]
+}
